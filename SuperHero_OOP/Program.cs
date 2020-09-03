@@ -18,6 +18,7 @@ namespace SuperHero_OOP
             Console.WriteLine(firstHero.Name);
             Console.WriteLine(secondHero.Name);
 
+            //Calling Methods
             secondHero.Death();
             firstHero.MaxLevel();
             Console.WriteLine(firstHero.Name + " has a power level of " + firstHero.PowerLevel );

@@ -63,6 +63,8 @@ namespace SuperHero_OOP
         }
 
         //methods
+        
+        //Death Method will print to the console the name of the hero and a string
         public void Death()
         {
             if (isDead)
@@ -73,6 +75,8 @@ namespace SuperHero_OOP
             
         }
 
+        //Max Level Method will check to see if the Hero meets the conditions
+        //then return the Hero current power level
         public int MaxLevel()
         {
             if (PowerLevel <= 9)
