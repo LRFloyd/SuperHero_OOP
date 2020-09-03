@@ -36,7 +36,33 @@ namespace SuperHero_OOP
             set { isDead = value; }
         }
 
+        //constructors
+        public Hero()
+        {
+            
+        }
 
+        public Hero(string name,int speed)
+        {
+            this.name = name;
+            this.speed = speed;
+        }
+        
+        public Hero( int powerLevel, bool isDead)
+        {
+            this.powerLevel = powerLevel;
+            this.isDead = isDead;
+        }
+
+        //methods
+        public void Death()
+        {
+            if (isDead)
+            {
+                isDead = false;
+            }
+            Console.WriteLine(this.name + isDead +"is gone" );
+        }
         
         
     }
