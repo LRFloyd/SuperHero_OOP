@@ -73,17 +73,16 @@ namespace SuperHero_OOP
             
         }
 
-        public void MaxLevel(int level)
+        public int MaxLevel()
         {
-            
-            if (level == 10)
+            if (PowerLevel <= 9)
             {
-                level = powerLevel;
                 MaxPower = true;
+                PowerLevel = 10;
             }
-            Console.WriteLine(this.name + "is at Full Power!");
+
+            return this.PowerLevel;
         }
-        
         
     }
 }
