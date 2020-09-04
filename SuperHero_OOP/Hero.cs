@@ -10,6 +10,7 @@ namespace SuperHero_OOP
         private int powerLevel;
         private int speed;
         private bool isDead = true;
+        private bool maxPower = false;
 
         //properties
         public string Name
@@ -36,6 +37,12 @@ namespace SuperHero_OOP
             set { isDead = value; }
         }
 
+        public bool MaxPower
+        {
+            get { return maxPower; }
+            set { maxPower = value; }
+        }
+
         //constructors
         public Hero()
         {
@@ -48,8 +55,9 @@ namespace SuperHero_OOP
             this.speed = speed;
         }
         
-        public Hero( int powerLevel, bool isDead)
+        public Hero( string name, int powerLevel, bool isDead)
         {
+            this.name = name;
             this.powerLevel = powerLevel;
             this.isDead = isDead;
         }
@@ -59,9 +67,21 @@ namespace SuperHero_OOP
         {
             if (isDead)
             {
+                Console.WriteLine(this.name + " is gone" );
                 isDead = false;
             }
-            Console.WriteLine(this.name + isDead +"is gone" );
+            
+        }
+
+        public void MaxLevel(int level)
+        {
+            
+            if (level == 10)
+            {
+                level = powerLevel;
+                MaxPower = true;
+            }
+            Console.WriteLine(this.name + "is at Full Power!");
         }
         
         
